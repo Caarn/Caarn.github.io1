@@ -195,8 +195,7 @@ textarea {
 
 .input-line {
     border-radius: 0.01vw;
-    border-bottom: 1px;
-    height: 0.01vw;
+    height: 0.02vw;
     width: 100%;
     background-color: #3b245a;
 }
