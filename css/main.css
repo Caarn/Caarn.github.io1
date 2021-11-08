@@ -20,6 +20,14 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    font-size: 2vw;
+}
+
+@media (max-width: 425px) {
+    header {
+        height: 14vw;
+        font-size: 4vw;
+    }
 }
 
 .header-logo {
@@ -43,7 +51,7 @@ header {
     font-family: Roboto;
     display: flex;
     justify-content: end;
-    font-size: 2vw;
+    font-size: 100%;
 }
 
 .header-block-auth-text {
