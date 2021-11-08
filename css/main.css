@@ -363,6 +363,7 @@
     
     .form-register-label-text {
         width: 100%;
+        font-size: 100%;
         text-align: center;
     }
     
@@ -370,7 +371,7 @@
         display: flex;
         width: 100%;
         justify-content: end;
-        font-size: 3.5vw;
+        font-size: 3vw;
         margin-left: 4vw;
         margin-right: 4vw;
     }
@@ -430,6 +431,7 @@
         font-size: 1.7vw;
         border-radius: 0.5vw;
         overflow: hidden;
+        margin-bottom: 3vw;
     }
     
     .form-register-button-auth {
@@ -539,6 +541,7 @@
             margin-top: 2vw;
             height: 7vw;
             font-size: 5vw;
+            margin-bottom: 4vw;
         }
         .form-register-button-block-register {
             border-radius: 2vw;
