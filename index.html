@@ -4,11 +4,12 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width">
     <title>Фотогаллерея</title>
+
 </head>
 
 </body>
-
 <div class="forms-wrapper">
     <form class="form-auth" action="/my-handling-form-page" method="post">
         <div class="form-auth-label">
@@ -18,15 +19,19 @@
         </div>
         <div class="form-auth-input-block">
             <div class="form-auth-input">
-                <input placeholder=" Логин" id="login" name="user_login" />
+                <input placeholder="Логин" id="login" name="user_login" />
             </div>
+            <div class="input-line"></div>
             <div class="form-auth-input">
-                <input placeholder=" Пароль" id="password" name="user_password" />
+                <input placeholder="Пароль" id="password" name="user_password" />
             </div>
+            <div class="input-line"></div>
             <div class="button-block-auth">
-                <div class="button-auth">
-                    <button type="submit">Войти</button>
-                </div>
+                <button class="button-auth" type="submit">Войти</button>
+            </div>
+
+            <div class="button-block-register">
+                <button class="button-register" type="submit">Зарегистрироваться</button>
             </div>
         </div>
     </form>
