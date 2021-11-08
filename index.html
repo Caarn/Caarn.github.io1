@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width">
+
     <title>Фотогаллерея</title>
 
 </head>
@@ -13,7 +14,10 @@
 <div class="background-blur">
     <header>
 
-        <div class="header-logo"></div>
+        <div class="header-logo">
+            <a style="height:100%; width:100% ;display:block;" href="https://caarn.github.io/Lab2-web.github.io/"></a>
+        </div>
+
         <div class="header-block-auth">
 
 
@@ -240,6 +244,11 @@
         </div>
     </form>
 </div>
+<script>
+    let form = document.forms.form - auth;
+    let elem = form.elements.user_login;
+    alert(elem.value);
+</script>
 </body>
 
 
