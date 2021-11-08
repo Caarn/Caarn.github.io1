@@ -78,14 +78,17 @@
         justify-content: center;
     }
     
-    .box {
+    [class^="box-"] {
+        color: transparent;
         border-radius: 1vw;
-        background-color: url("../images/test-image.jpg");
+        background-color: darkgrey;
+        background: url("../images/5.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         /* Размещаем контейнеры по центру */
         display: grid;
         place-items: center;
+        box-shadow: 0.5vw 0.7vw 1vw rgba(0, 0, 0, 0.5);
     }
     /*Подвал*/
     
