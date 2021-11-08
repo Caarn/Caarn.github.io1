@@ -1,252 +1,322 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-    behavior: smooth;
-}
-
-
-/*Шапка*/
-
-header {
-    width: 100%;
-    height: 7vw;
-    background: rgba(11, 54, 119, 1);
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 2vw;
-}
-
-@media (max-width: 425px) {
-    header {
-        height: 14vw;
-        font-size: 4vw;
+    * {
+        padding: 0;
+        margin: 0;
     }
-}
-
-.header-logo {
-    width: 10%;
-    height: 100%;
-    background: url("../images/logo2.png");
-    background-position: center center;
-    background-size: cover;
-    top: 0px;
-    margin-left: 2%;
-    display: flex;
-}
-
-.header-block-auth {
-    margin-top: 2vw;
-    margin-right: 3vw;
-    width: auto;
-    height: auto;
-    right: 0%;
-    color: rgba(255, 255, 255, 1);
-    font-family: Roboto;
-    display: flex;
-    justify-content: end;
-    font-size: 100%;
-}
-
-.header-block-auth-text {
-    width: 15vw;
-    height: 100%;
-    font-size: 100%;
-    text-align: right;
-    display: inline;
-}
-
-
-/*Контент*/
-
-main {
-    min-height: 50vw;
-    width: 100%;
-    height: 100%;
-    background: url("../images/background2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*background: rgba(4, 33, 78, 1);*/
-}
-
-
-/*Подвал*/
-
-footer {
-    width: 100%;
-    height: 7vw;
-    background: rgba(11, 54, 119, 1);
-    display: flex;
-}
-
-.footer__contact {
-    width: 40%;
-    right: 0%;
-    margin-top: 1%;
-    margin-left: auto;
-    margin-right: 2%;
-    color: rgba(255, 255, 255, 1);
-    font-family: Roboto;
-}
-
-.contact__name {
-    width: 100%;
-    height: 50%;
-    font-size: 1.9vw;
-    text-align: right;
-}
-
-.contact__email {
-    width: 100%;
-    height: 50%;
-    font-size: 1.6vw;
-    text-align: right;
-}
-
-
-/*формы*/
-
-.forms-wrapper {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    /*display: none;*/
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.form-auth {
-    height: 25vw;
-    width: 30vw;
-    color: rgba(255, 255, 255, 1);
-    background: radial-gradient(100% 100%, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0));
-    border-radius: 2vw;
-    position: fixed;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.form-auth-label-text {
-    width: 100%;
-    text-align: center;
-}
-
-.form-auth-label {
-    display: flex;
-    width: 100%;
-    justify-content: end;
-    font-size: 3.5vw;
-    margin-left: 4vw;
-    margin-right: 4vw;
-}
-
-.form-auth-input-block {
-    width: 100%;
-    height: auto;
-    margin-left: 4vw;
-    margin-right: 4vw;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-}
-
-.form-auth-input {
-    font: 1.8vw sans-serif;
-    box-sizing: border-box;
-    margin-top: 1vw;
-}
-
-input {
-    color: white;
-    font-size: 100%;
-    border: transparent;
-    background: transparent;
-    border-radius: 0.5vw;
-    width: 100%;
-}
-
-input,
-textarea {
-    outline: none;
-}
-
-input:active,
-textarea:active {
-    outline: none;
-}
-
-:focus {
-    outline: none;
-}
-
-textarea {
-    resize: none;
-}
-
-textarea {
-    resize: vertical;
-}
-
-textarea {
-    resize: horizontal;
-}
-
-.input-line {
-    border-radius: 0.01vw;
-    height: 0.02vw;
-    width: 100%;
-    background-color: #3b245a;
-}
-
-.button-block-auth {
-    display: flex;
-    margin-top: 2vw;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 4vw;
-}
-
-.button-auth {
-    width: 100%;
-    color: white;
-    border: transparent;
-    background: #3e1e58e0;
-    border-radius: 0.5vw;
-    height: 3vw;
-    font-size: 1.7vw;
-}
-
-.button-block-register {
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 4vw;
-}
-
-.button-register {
-    width: 100%;
-    color: rgba(231, 231, 231, 0.712);
-    border: transparent;
-    background: transparent;
-    border-radius: 0.5vw;
-    height: 3vw;
-    font-size: 1.7vw;
-}
-
-::placeholder {
-    color: rgba(231, 231, 231, 0.712);
-}
+    
+    html,
+    body {
+        height: auto;
+        width: 100%;
+        behavior: smooth;
+    }
+    /*Шапка*/
+    
+    header {
+        width: 100%;
+        height: 7vw;
+        background: rgba(11, 54, 119, 1);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 2vw;
+    }
+    
+    .header-logo {
+        width: 10%;
+        height: 100%;
+        background: url("../images/logo2.png");
+        background-position: center center;
+        background-size: cover;
+        top: 0px;
+        margin-left: 2%;
+        display: flex;
+    }
+    
+    .header-block-auth {
+        margin-top: 2vw;
+        margin-right: 3vw;
+        width: auto;
+        height: auto;
+        right: 0%;
+        color: rgba(255, 255, 255, 1);
+        font-family: Roboto;
+        display: flex;
+        justify-content: end;
+        font-size: 100%;
+    }
+    
+    .header-block-auth-text {
+        width: auto;
+        height: 100%;
+        font-size: 100%;
+        text-align: right;
+        margin-left: 2vw;
+        display: inline;
+    }
+    /*Контент*/
+    
+    main {
+        display: flex;
+        min-height: 50vw;
+        width: 100%;
+        height: auto;
+        background: url("../images/background2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*background: rgba(4, 33, 78, 1);*/
+    }
+    
+    .container {
+        position: relative;
+        margin: 3vw;
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-columns: 30% 30% 30%;
+        grid-auto-rows: 30vw 30vw 30vw;
+        gap: 4vw;
+        justify-content: center;
+    }
+    
+    .box {
+        border-radius: 1vw;
+        background-color: url("../images/test-image.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* Размещаем контейнеры по центру */
+        display: grid;
+        place-items: center;
+    }
+    /*Подвал*/
+    
+    footer {
+        width: 100%;
+        height: 7vw;
+        background: rgba(11, 54, 119, 1);
+        display: flex;
+        font-size: 1.9vw;
+    }
+    
+    .footer__contact {
+        width: auto;
+        right: 0%;
+        margin-top: 1%;
+        margin-left: auto;
+        margin-right: 2%;
+        color: rgba(255, 255, 255, 1);
+        font-family: Roboto;
+        font-size: 100%;
+    }
+    
+    .contact__name {
+        width: 100%;
+        height: 50%;
+        font-size: 100%;
+        text-align: right;
+    }
+    
+    .contact__email {
+        width: 100%;
+        height: 50%;
+        font-size: 84%;
+        text-align: right;
+    }
+    /*формы*/
+    
+    .forms-wrapper {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        /*формы*/
+        display: none;
+        /*формы*/
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .form-auth {
+        height: 25vw;
+        width: 30vw;
+        color: rgba(255, 255, 255, 1);
+        background: radial-gradient(100% 100%, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0.10));
+        border-radius: 2vw;
+        position: fixed;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .form-auth-label-text {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .form-auth-label {
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        font-size: 3.5vw;
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+    
+    .form-auth-input-block {
+        width: 100%;
+        height: auto;
+        margin-left: 4vw;
+        margin-right: 4vw;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+    
+    .form-auth-input {
+        font: 1.8vw sans-serif;
+        box-sizing: border-box;
+        margin-top: 1vw;
+    }
+    
+    input {
+        color: white;
+        font-size: 100%;
+        border: transparent;
+        background: transparent;
+        border-radius: 0.5vw;
+        width: 100%;
+    }
+    
+    input,
+    textarea {
+        outline: none;
+    }
+    
+    input:active,
+    textarea:active {
+        outline: none;
+    }
+    
+     :focus {
+        outline: none;
+    }
+    
+    textarea {
+        resize: none;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    textarea {
+        resize: horizontal;
+    }
+    
+    .input-line {
+        border-radius: 0.01vw;
+        height: 0.02vw;
+        width: 100%;
+        background-color: #3b245a;
+    }
+    
+    .button-block-auth {
+        display: flex;
+        margin-top: 2vw;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 3vw;
+        font-size: 1.7vw;
+        border-radius: 0.5vw;
+        overflow: hidden;
+    }
+    
+    .button-auth {
+        width: 100%;
+        color: white;
+        border: transparent;
+        background: #3e1e58e0;
+        height: 100%;
+        font-size: 100%;
+    }
+    
+    .button-block-register {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 4vw;
+        font-size: 1.7vw;
+        border-radius: 0.5vw;
+        overflow: hidden;
+    }
+    
+    .button-register {
+        width: 100%;
+        color: rgba(231, 231, 231, 0.712);
+        border: transparent;
+        background: transparent;
+        height: 100%;
+        font-size: 100%;
+    }
+    
+     ::placeholder {
+        color: rgba(231, 231, 231, 0.712);
+    }
+    
+    @media (max-width: 426px) {
+        header {
+            height: 14vw;
+            font-size: 6vw;
+        }
+        .header-block-auth {
+            margin-top: 3vw;
+        }
+        .header-logo {
+            margin-left: 4vw;
+        }
+        .container {
+            grid-template-columns: 45% 45%;
+            grid-auto-rows: 45vw 45vw 45vw 45vw;
+        }
+        .box {
+            border-radius: 3vw;
+        }
+        footer {
+            height: 15vw;
+            font-size: 4vw;
+        }
+        .form-auth {
+            border-radius: 8vw;
+            width: 80vw;
+            height: 70vw;
+        }
+        .form-auth-label {
+            font-size: 10vw;
+        }
+        .form-auth-input-block {
+            height: 40vw;
+        }
+        input {
+            font-size: 6vw;
+        }
+        .button-block-auth {
+            border-radius: 2vw;
+            margin-top: 5vw;
+            height: 7vw;
+            font-size: 5vw;
+        }
+        .button-block-register {
+            border-radius: 2vw;
+            margin-top: 2vw;
+            height: 7vw;
+            font-size: 5vw;
+        }
+        .form-auth-input {
+            margin-top: 2vw;
+        }
+    }
