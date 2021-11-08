@@ -3,6 +3,32 @@
         margin: 0;
     }
     
+    input,
+    textarea {
+        outline: none;
+    }
+    
+    input:active,
+    textarea:active {
+        outline: none;
+    }
+    
+     :focus {
+        outline: none;
+    }
+    
+    textarea {
+        resize: none;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    textarea {
+        resize: horizontal;
+    }
+    
     html,
     body {
         height: auto;
@@ -10,6 +36,15 @@
         behavior: smooth;
     }
     /*Шапка*/
+    
+    .background-blur {
+        position: absolute;
+        top: 0%;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        filter: blur(5px);
+    }
     
     header {
         width: 100%;
@@ -73,7 +108,7 @@
         width: 100%;
         height: auto;
         grid-template-columns: 30% 30% 30%;
-        grid-auto-rows: 30vw 30vw 30vw;
+        grid-auto-rows: 30vw;
         gap: 4vw;
         justify-content: center;
     }
@@ -127,6 +162,7 @@
     /*формы*/
     
     .forms-wrapper {
+        top: 0%;
         position: fixed;
         display: flex;
         align-items: center;
@@ -134,7 +170,7 @@
         height: 100vh;
         width: 100vw;
         /*формы*/
-        display: none;
+        /*display: none;*/
         /*формы*/
         background-color: rgba(0, 0, 0, 0.3);
     }
@@ -143,7 +179,8 @@
         height: 25vw;
         width: 30vw;
         color: rgba(255, 255, 255, 1);
-        background: radial-gradient(100% 100%, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0.10));
+        background: radial-gradient(100% 100%, rgba(7, 33, 73, 0.6), rgba(7, 33, 73, 0.80), rgba(7, 33, 73, 0.60));
+        box-shadow: 0.5vw 0.7vw 1vw rgba(0, 0, 0, 0.5);
         border-radius: 2vw;
         position: fixed;
         display: flex;
@@ -191,37 +228,11 @@
         width: 100%;
     }
     
-    input,
-    textarea {
-        outline: none;
-    }
-    
-    input:active,
-    textarea:active {
-        outline: none;
-    }
-    
-     :focus {
-        outline: none;
-    }
-    
-    textarea {
-        resize: none;
-    }
-    
-    textarea {
-        resize: vertical;
-    }
-    
-    textarea {
-        resize: horizontal;
-    }
-    
     .input-line {
         border-radius: 0.01vw;
         height: 0.02vw;
         width: 100%;
-        background-color: #3b245a;
+        background-color: #acacac;
     }
     
     .button-block-auth {
@@ -284,7 +295,7 @@
         }
         .container {
             grid-template-columns: 45% 45%;
-            grid-auto-rows: 45vw 45vw 45vw 45vw;
+            grid-auto-rows: 45vw;
         }
         .box {
             border-radius: 3vw;
