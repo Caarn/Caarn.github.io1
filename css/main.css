@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.v5_26 {
+  width: 100%;
+  height: 1299px;
+  background: rgba(193,0,0,0.8999999761581421);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v5_37 {
+  width: 100%;
+  color: rgba(242,240,240,1);
+  position: absolute;
+  top: 124px;
+  left: 57px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 48px;
+  opacity: 1;
+  text-align: left;
+}
+.v12_41 {
+  width: 227px;
+  height: 56px;
+  background: rgba(25,61,90,1);
+  opacity: 1;
+  position: absolute;
+  top: 1201px;
+  left: 552px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+}
+.v12_43 {
+  width: 227px;
+  height: 56px;
+  background: rgba(25,61,90,1);
+  opacity: 1;
+  position: absolute;
+  top: 1201px;
+  left: 635px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+}
+.v12_42 {
+  width: 227px;
+  height: 56px;
+  background: rgba(25,61,90,1);
+  opacity: 1;
+  position: absolute;
+  top: 1201px;
+  left: 293px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+}
+.v12_47 {
+  width: 227px;
+  color: rgba(242,240,240,1);
+  position: absolute;
+  top: 1198px;
+  left: 293px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 36px;
+  opacity: 1;
+  text-align: center;
+}
+.v12_46 {
+  width: 227px;
+  color: rgba(242,240,240,1);
+  position: absolute;
+  top: 1198px;
+  left: 552px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 36px;
+  opacity: 1;
+  text-align: center;
+}
+.v12_44 {
+  width: 230px;
+  color: rgba(242,240,240,1);
+  position: absolute;
+  top: 1198px;
+  left: 632px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 36px;
+  opacity: 1;
+  text-align: center;
+}
