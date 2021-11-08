@@ -349,7 +349,7 @@
     .form-register {
         opacity: 1;
         height: 45vw;
-        width: 30vw;
+        width: 45vw;
         color: rgba(255, 255, 255, 1);
         background: radial-gradient(100% 100%, rgba(7, 33, 73, 0.6), rgba(7, 33, 73, 0.80), rgba(7, 33, 73, 0.60));
         box-shadow: 0.5vw 0.7vw 1vw rgba(0, 0, 0, 0.5);
