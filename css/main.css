@@ -8,6 +8,11 @@
         outline: none;
     }
     
+    input,
+    button {
+        font-size: 100%;
+    }
+    
     input:active,
     textarea:active {
         outline: none;
@@ -33,7 +38,6 @@
     body {
         height: auto;
         width: 100%;
-        behavior: smooth;
     }
     /*Шапка*/
     
@@ -43,7 +47,7 @@
         height: 100%;
         width: 100%;
         background: transparent;
-        /*filter: blur(5vw);*/
+        /*filter: blur(1vw);*/
     }
     
     header {
@@ -221,7 +225,7 @@
 
     */
     
-    .forms-wrapper {
+    .wrapper {
         top: 0%;
         position: fixed;
         display: flex;
@@ -229,9 +233,9 @@
         justify-content: center;
         height: 100vh;
         width: 100vw;
-        /*формы*/
+        /*формы
         display: none;
-        /*формы*/
+        формы*/
         background-color: rgba(0, 0, 0, 0.3);
     }
     
@@ -240,33 +244,36 @@
         height: 25vw;
         width: 30vw;
         color: rgba(255, 255, 255, 1);
-        background: radial-gradient(100% 100%, rgba(7, 33, 73, 0.6), rgba(7, 33, 73, 0.80), rgba(7, 33, 73, 0.60));
+        background: radial-gradient(100% 100%, rgba(7, 33, 73, 0.8), rgba(7, 33, 73, 0.90), rgba(7, 33, 73, 0.80));
         box-shadow: 0.5vw 0.7vw 1vw rgba(0, 0, 0, 0.5);
         border-radius: 2vw;
         position: fixed;
         display: flex;
+        display: none;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
     }
     
-    .form-auth-label-text {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .form-auth-label {
+    .form__item {
         display: flex;
-        width: 100%;
-        justify-content: end;
-        font-size: 3.5vw;
-        margin-left: 4vw;
-        margin-right: 4vw;
+        flex-direction: column;
+        align-content: space-between;
+        margin-bottom: 2vw;
     }
     
-    .form-auth-input-block {
+    .form__title {
+        display: flex;
+        justify-content: center;
+        font-size: 3.5vw;
+        font-weight: 200;
+        margin-bottom: 2vw;
+    }
+    
+    .form__body {
         width: 100%;
-        height: auto;
+        height: 100%;
+        margin-top: 1vw;
         margin-left: 4vw;
         margin-right: 4vw;
         display: flex;
@@ -274,69 +281,77 @@
         align-content: space-between;
     }
     
-    .form-auth-input {
+    .form__input {
         font: 1.8vw sans-serif;
         box-sizing: border-box;
-        margin-top: 1vw;
-    }
-    
-    .input-text {
         color: white;
-        font-size: 100%;
         border: transparent;
         background: transparent;
         border-radius: 0.5vw;
         width: 100%;
     }
     
-    .input-line {
+    .form__input._error {
+        box-shadow: 0 0 2vw red;
+    }
+    
+    .form__line {
         border-radius: 0.01vw;
-        height: 0.02vw;
+        height: 0.2vw;
         width: 100%;
         background-color: #acacac;
     }
     
-    .button-block-auth {
-        display: flex;
+    .form__void {
         margin-top: 2vw;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
+        display: flex;
+        height: 1vw;
         width: 100%;
-        height: 3vw;
-        font-size: 1.7vw;
-        border-radius: 0.5vw;
-        overflow: hidden;
     }
     
-    .button-auth {
+    .form__button {
+        min-height: 3.5vw;
+        align-items: center;
+        display: flex;
+        text-transform: uppercase;
+        letter-spacing: 0.01vw;
+        margin-top: 0.5vw;
+        justify-content: center;
         width: 100%;
+        font-size: 1.7vw;
+        border-radius: 0.8vw;
+        width: 100%;
+        cursor: pointer;
+        box-shadow: 0.1vw 0.1vw 0.3vw #0e081349;
         color: white;
         border: transparent;
         background: #3e1e58e0;
-        height: 100%;
-        font-size: 100%;
+        transition: background-color 0.5 ease 0s;
     }
     
-    .button-block-register {
+    .form__button_ {
+        min-height: 3.5vw;
+        align-items: center;
         display: flex;
+        margin-top: 0.5vw;
         justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
         width: 100%;
-        height: 4vw;
         font-size: 1.7vw;
-        border-radius: 0.5vw;
-        overflow: hidden;
-    }
-    
-    .button-register {
+        border-radius: 0.8vw;
         width: 100%;
-        color: rgba(231, 231, 231, 0.712);
+        cursor: pointer;
+        color: rgb(170, 170, 170);
         border: transparent;
         background: transparent;
-        height: 100%;
-        font-size: 100%;
+        transition: color 0.5 ease 0s;
+    }
+    
+    .form__button:hover {
+        background-color: #2e1344e0;
+    }
+    
+    .form__button_:hover {
+        color: rgb(128, 128, 128);
     }
     /*
 
@@ -356,105 +371,19 @@
     
     .form-register {
         opacity: 1;
-        height: 45vw;
-        width: 45vw;
+        padding: 1vw 0vw 3vw;
+        max-height: 45vw;
+        max-width: 45vw;
         color: rgba(255, 255, 255, 1);
-        background: radial-gradient(100% 100%, rgba(7, 33, 73, 0.6), rgba(7, 33, 73, 0.80), rgba(7, 33, 73, 0.60));
+        background: radial-gradient(100% 100%, rgba(7, 33, 73, 0.8), rgba(7, 33, 73, 0.90), rgba(7, 33, 73, 0.80));
         box-shadow: 0.5vw 0.7vw 1vw rgba(0, 0, 0, 0.5);
-        border-radius: 2vw;
+        border-radius: 5vw;
         position: fixed;
+        display: none;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-    }
-    
-    .form-register-label-text {
-        width: 100%;
-        font-size: 100%;
-        text-align: center;
-    }
-    
-    .form-register-label {
-        display: flex;
-        width: 100%;
-        justify-content: end;
-        font-size: 3vw;
-        margin-left: 4vw;
-        margin-right: 4vw;
-    }
-    
-    .form-register-input-block {
-        width: 100%;
-        height: auto;
-        margin-left: 4vw;
-        margin-right: 4vw;
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-    }
-    
-    .form-register-input {
-        font: 1.8vw sans-serif;
-        box-sizing: border-box;
-        margin-top: 1vw;
-    }
-    
-    .input-line {
-        border-radius: 0.01vw;
-        height: 0.1vw;
-        width: 100%;
-        background-color: #acacac;
-    }
-    
-    .form-register-button-block-register {
-        display: flex;
-        margin-top: 2vw;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        height: 3vw;
-        font-size: 1.7vw;
-        border-radius: 0.5vw;
-        overflow: hidden;
-    }
-    
-    .form-register-button-register {
-        width: 100%;
-        color: white;
-        border: transparent;
-        background: #3e1e58e0;
-        height: 100%;
-        font-size: 100%;
-    }
-    
-    .form-register-button-block-auth {
-        display: flex;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        height: 4vw;
-        font-size: 1.7vw;
-        border-radius: 0.5vw;
-        overflow: hidden;
-        margin-bottom: 3vw;
-    }
-    
-    .form-register-button-auth {
-        width: 100%;
-        color: rgba(231, 231, 231, 0.712);
-        border: transparent;
-        background: transparent;
-        height: 100%;
-        font-size: 100%;
-    }
-    
-    .checkbox-block {
-        margin-top: 1vw;
-        font-size: 2vw;
-        text-align: justify
     }
     
     a,
@@ -463,60 +392,56 @@
         color: #407be7e0;
     }
     
-    .checkbox-block {
+    .checkbox__input:checked+.checkbox__label::after {
+        transform: scale(1);
+    }
+    
+    .checkbox__label {
+        font-size: 2vw;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .checkbox__label::before {
+        content: "";
+        margin-top: 0.5vw;
+        align-self: flex-start;
+        flex: 0 0 2vw;
+        height: 2vw;
+        background-color: white;
+        border-radius: 0.5vw;
+        margin-right: 1vw;
+    }
+    
+    .checkbox__label::after {
+        transition: transform 0.5s ease 0s;
+        content: "";
+        margin-top: 0.5vw;
+        align-self: flex-start;
+        width: 1.5vw;
+        height: 1.5vw;
+        position: absolute;
+        top: 0.23vw;
+        left: 0.25vw;
+        background: radial-gradient(#4340e7e0, #1b8debe0);
+        border-radius: 0.5vw;
+        transform: scale(0);
+    }
+    
+    .checkbox__input {
+        display: none;
+    }
+    
+    .checkbox {
+        height: 8vw;
+        display: flex;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
         user-select: none;
+        text-align: justify;
     }
-    
-    .custom-checkbox {
-        opacity: 0;
-        width: 0%;
-        height: 0%;
-    }
-    
-    .custom-checkbox+label::before {
-        content: '';
-        display: inline-block;
-        width: 1.3vw;
-        height: 1.3vw;
-        flex-shrink: 0;
-        flex-grow: 0;
-        border: 0.1vw solid #adb5bd;
-        border-radius: 0.25vw;
-        margin-right: 0.5vw;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 50% 50%;
-    }
-    
-    .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
-        border-color: #b3d7ff;
-    }
-    
-    .custom-checkbox:not(:disabled):active+label::before {
-        background-color: #b3d7ff;
-        border-color: #b3d7ff;
-    }
-    
-    .custom-checkbox:focus+label::before {
-        box-shadow: 0 0 0 0.2vw rgba(0, 123, 255, 0.25);
-    }
-    
-    .custom-checkbox:focus:not(:checked)+label::before {
-        border-color: #80bdff;
-    }
-    /* стили для чекбокса, находящегося в состоянии checked */
-    
-    .custom-checkbox:checked+label::before {
-        border-color: #0b76ef;
-        background-color: #0b76ef;
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-    }
-    /* стили для чекбокса, находящегося в состоянии disabled */
-    
-    .custom-checkbox:disabled+label::before {
-        background-color: #e9ecef;
-    }
-    
+    /*
     @media (max-width: 426px) {
         header {
             height: 14vw;
@@ -624,3 +549,4 @@
             border-radius: 1vw;
         }
     }
+    */

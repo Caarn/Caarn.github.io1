@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width">
+    <script src="script.js"></script>
 
     <title>Фотогаллерея</title>
 
@@ -176,79 +177,62 @@
         </div>
     </footer>
 </div>
-<div class="forms-wrapper">
-    <form class="form-auth" action="/my-handling-form-page" method="post">
-        <div class="form-auth-label">
-            <div class="form-auth-label-text">
-                Вход
+<div class="wrapper">
+    <!--Форма входа-->
+    <div class="form-auth">
+        <form action="#" method="post" id="form1" class="form__body">
+            <h1 class="form__title">Вход</h1>
+            <div class="form__item">
+                <input id="formLogin" placeholder="Логин" type="text" name="E-mail" class="form__input _req _email" />
+                <div class="form__line"></div>
             </div>
-        </div>
-        <div class="form-auth-input-block">
-            <div class="form-auth-input">
-                <input class="input-text" placeholder="Логин" id="login" name="user_login" />
-            </div>
-            <div class="input-line"></div>
-            <div class="form-auth-input">
-                <input class="input-text" placeholder="Пароль" id="password" name="user_password" />
-            </div>
-            <div class="input-line"></div>
-            <div class="button-block-auth">
-                <button class="button-auth" type="submit">Войти</button>
+            <div class="form__item">
+                <input id="formPassword" placeholder="Пароль" type="text" name="password" class="form__input _req" />
+                <div class="form__line"></div>
             </div>
 
-            <div class="button-block-register">
-                <button class="button-register" type="submit">Регистрация</button>
-            </div>
-        </div>
-    </form>
+            <button type="submit" class="form__button">Войти</button>
+            <button type="submit" class="form__button_">Регистрация</button>
 
-    <form class="form-register" action="/my-handling-form-page" method="post">
-        <div class="form-register-label">
-            <div class="form-register-label-text">
-                Регистрация
-            </div>
-        </div>
-        <div class="form-register-input-block">
-            <div class="form-register-input">
-                <input class="input-text" placeholder="Имя" id="name" name="user_login" />
-            </div>
-            <div class="input-line"></div>
-            <div class="form-register-input">
-                <input class="input-text" placeholder="E-mail" id="login" name="user_login" />
-            </div>
-            <div class="input-line"></div>
-            <div class="form-register-input">
-                <input class="input-text" placeholder="Телефон" id="phone" name="user_phone" />
-            </div>
-            <div class="input-line"></div>
-            <div class="form-register-input">
-                <input class="input-text" placeholder="Пароль" id="password" name="user_password" />
-            </div>
-            <div class="input-line"></div>
-            <div class="form-register-input">
-                <input class="input-text" placeholder="Повторите пароль" id="check_password" name="user_check_password" />
-            </div>
-            <div class="input-line"></div>
-            <div class="checkbox-block">
-                <input class="custom-checkbox" id="formAgreement" type="checkbox" name="agreement">
-                <label class="checkbox-label" for="formAgreement">Я даю свое согласие на обработку персональных данных в соответствии с <a href="">условиями</a>*</label>
-            </div>
+        </form>
+    </div>
 
-            <div class="form-register-button-block-register">
-                <button class="form-register-button-register" type="submit">Зарегистрироваться</button>
+    <div class="form-register">
+        <form action="#" method="post" id="form2" class="form__body">
+            <h1 class="form__title">Регистрация</h1>
+            <div class="form__item">
+                <input id="formName" placeholder="Имя" type="text" name="name" class="form__input _req" />
+                <div class="form__line"></div>
             </div>
+            <div class="form__item">
+                <input id="formEmail" placeholder="E-mail" type="text" name="E-mail" class="form__input _req _email" />
+                <div class="form__line"></div>
+            </div>
+            <div class="form__item">
+                <input id="formPhone" placeholder="Телефон" type="text" name="phone" class="form__input _req" />
+                <div class="form__line"></div>
+            </div>
+            <div class="form__item">
+                <input id="formPassword" placeholder="Пароль" type="text" name="password" class="form__input _req" />
+                <div class="form__line"></div>
+            </div>
+            <div class="form__item">
+                <input id="formCheckPassword" placeholder="Повторите пароль" type="text" name="check_password" class="form__input _req" />
+                <div class="form__line"></div>
+            </div>
+            <div class="checkbox">
+                <input id="formAgreement2" checked="checked" type="checkbox" name="agreement" class="checkbox__input _req">
+                <label for="formAgreement2" class="checkbox__label"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="">условиями</a>*</span></label>
+            </div>
+            <button type="submit" class="form__button">Зарегистрироваться</button>
+            <button type="submit" class="form__button_">Уже есть аккаунт? Войти</button>
 
-            <div class="form-register-button-block-auth">
-                <button class="form-register-button-auth" type="submit">Уже есть аккаунт? Войти</button>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
+
+
 </div>
-<script>
-    let form = document.forms.form - auth;
-    let elem = form.elements.user_login;
-    alert(elem.value);
-</script>
+
 </body>
 
 
