@@ -34,14 +34,18 @@
         resize: horizontal;
     }
     
-    html,
-    body {
-        height: auto;
+    html {
         width: 100%;
+        min-height: 100%;
     }
-    /*Шапка*/
     
-    .background-blur {
+    body {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    #body__blur {
         position: absolute;
         top: 0%;
         height: 100%;
@@ -49,124 +53,159 @@
         background: transparent;
         /*filter: blur(1vw);*/
     }
+    /******************************************************************************
+                                        Шапка
+    ******************************************************************************/
     
-    header {
-        width: 100%;
+    #header {
         height: 7vw;
         background: rgba(11, 54, 119, 1);
         display: flex;
         justify-content: space-between;
         width: 100%;
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
     
-    .header-logo {
+    #header__body {
+        width: 100%;
+        height: 100%;
+        color: rgba(255, 255, 255, 1);
+    }
+    
+    #logo {
+        float: left;
+        padding-left: 2%;
+        justify-content: left;
         width: 10%;
         height: 100%;
         background: url("../images/logo2.png");
         background-position: center center;
         background-size: cover;
-        top: 0px;
-        margin-left: 2%;
         display: flex;
     }
     
-    .header-block-auth {
-        margin-top: 2vw;
-        margin-right: 3vw;
+    #logo__link {
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+    
+    .link {
+        padding: 2vw;
+        float: right;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: auto;
         height: auto;
-        right: 0%;
-        color: rgba(255, 255, 255, 1);
-        font-family: Roboto;
-        display: flex;
-        justify-content: end;
         font-size: 100%;
+        font-family: Roboto;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        user-select: none;
     }
     
-    .header-block-auth-text {
-        width: auto;
-        height: 100%;
-        font-size: 100%;
-        text-align: right;
-        margin-left: 2vw;
-        display: inline;
+    .link:hover {
+        color: rgb(199, 199, 199);
+    }
+    
+    .link:visited {
+        color: white;
+    }
+    
+    .link__enter {
+        padding-right: 4vw;
     }
     /*Контент*/
     
-    main {
+    #main {
+        position: relative;
         display: flex;
-        min-height: 50vw;
-        width: 100%;
-        height: auto;
         background: url("../images/background2.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        /*background: rgba(4, 33, 78, 1);*/
+        max-height: auto;
+        min-height: 100vh;
     }
     
-    .container {
-        position: relative;
-        margin: 3vw;
-        display: grid;
+    #main__grid {
+        height: 100%;
         width: 100%;
-        height: auto;
+        display: grid;
         grid-template-columns: 30% 30% 30%;
         grid-auto-rows: 30vw;
         gap: 4vw;
         justify-content: center;
+        margin: 3vw;
     }
     
-    [class^="box-"] {
-        border-radius: 1vw;
-        background-color: darkgrey;
-        background: url("../images/5.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        /* Размещаем контейнеры по центру */
-        display: grid;
-        place-items: center;
-        align-items: end;
+    .box {
+        position: relative;
+        display: inline-block;
+        border-radius: 2vw;
+        background-color: rgba(169, 169, 169, 0.541);
+        overflow: hidden;
         box-shadow: 0.5vw 0.7vw 1vw rgba(21, 0, 46, 0.5);
+        background: url("../images/4.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     
-    .boxlabel {
-        background: linear-gradient(0deg, rgb(37, 37, 37) 0%, rgba(83, 83, 83, 0.5) 60%, rgba(83, 83, 83, 0.2) 80%, rgba(255, 255, 255, 0) 100%);
-        width: 100%;
-        height: 100%;
-        border-radius: 1vw;
-        align-items: center;
+    .box__content {
+        background: linear-gradient(rgba(88, 88, 88, 0.192), rgba(32, 32, 32, 0.87));
+        cursor: default;
+        text-decoration: none;
+        position: absolute;
         display: flex;
-        flex-wrap: wrap;
-        -webkit-transition: .5s ease-in-out;
-        -moz-transition: .5s ease-in-out;
-        -o-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
-    }
-    
-    .boxlabel-name {
-        color: white;
-        font-size: 3vw;
-        margin-top: 17vw;
-        margin-left: 2vw;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
         width: 100%;
-        background: transparent;
+        -webkit-transition: .4s ease-in-out;
+        -moz-transition: .4s ease-in-out;
+        -o-transition: .4s ease-in-out;
+        transition: .4s ease-in-out;
     }
     
-    .boxlabel-block {
+    .box__content:hover {
+        background-color: rgba(45, 52, 80, 0.171);
+    }
+    
+    .box__name {
+        display: flex;
+        color: white;
+        height: auto;
+        width: auto;
+        font-size: 3.5vw;
+        margin-left: 1.5vw;
+        margin-bottom: 1vw;
+        margin-top: 18vw;
+    }
+    
+    .box__name:hover {
+        cursor: pointer;
+    }
+    
+    .box__container_Date {
+        margin-bottom: 3vw;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        margin-left: 1.5vw;
         display: flex;
         flex-wrap: nowrap;
-        margin-left: 2vw;
-        width: 100%;
-        background: transparent;
     }
     
-    .boxlabel-block-date {
-        color: rgb(124, 124, 124);
+    .box__date {
+        width: 100%;
+        display: flex;
+        color: rgb(117, 117, 117);
         font-size: 2vw;
     }
     
-    .boxlabel-block-logo {
+    .date__logo {
+        display: flex;
         background: url("../images/logo-date.png");
         background-size: cover;
         height: 2vw;
@@ -175,41 +214,33 @@
         margin-right: 0.5vw;
     }
     
-    [class^="box-"]:hover .boxlabel {
-        background-color: rgba(83, 83, 83, 0.4);
+    .box__image {
+        user-select: none;
+        pointer-events: none;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
     }
     /*Подвал*/
     
-    footer {
+    #footer {
         width: 100%;
         height: 7vw;
         background: rgba(11, 54, 119, 1);
         display: flex;
-        font-size: 1.9vw;
+        align-items: flex-end;
+        flex-direction: column;
     }
     
-    .footer__contact {
+    .contact {
+        padding-right: 2vw;
+        font-size: 1.9vw;
         width: auto;
-        right: 0%;
-        margin-top: 1%;
-        margin-left: auto;
-        margin-right: 2%;
         color: rgba(255, 255, 255, 1);
         font-family: Roboto;
-        font-size: 100%;
-    }
-    
-    .contact__name {
         width: 100%;
         height: 50%;
-        font-size: 100%;
-        text-align: right;
-    }
-    
-    .contact__email {
-        width: 100%;
-        height: 50%;
-        font-size: 84%;
         text-align: right;
     }
     /*
@@ -225,7 +256,7 @@
 
     */
     
-    .wrapper {
+    .wrapperreg {
         top: 0%;
         position: fixed;
         display: flex;
@@ -233,14 +264,37 @@
         justify-content: center;
         height: 100vh;
         width: 100vw;
-        /*формы
-        display: none;
-        формы*/
         background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease 0s;
+    }
+    
+    .wrapperauth {
+        top: 0%;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease 0s;
+    }
+    
+    .wrapperreg:target {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .wrapperauth:target {
+        opacity: 1;
+        visibility: visible;
     }
     
     .form-auth {
-        opacity: 0;
         height: 25vw;
         width: 30vw;
         color: rgba(255, 255, 255, 1);
@@ -249,7 +303,6 @@
         border-radius: 2vw;
         position: fixed;
         display: flex;
-        display: none;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
@@ -282,24 +335,22 @@
     }
     
     .form__input {
+        border-color: transparent;
+        border: 0vw;
+        border-bottom: 0.1vw solid #acacac;
         font: 1.8vw sans-serif;
         box-sizing: border-box;
         color: white;
-        border: transparent;
         background: transparent;
-        border-radius: 0.5vw;
         width: 100%;
+    }
+    
+    .form__input:active {
+        border-bottom: 0.1vw solid #acacac;
     }
     
     .form__input._error {
-        box-shadow: 0 0 2vw red;
-    }
-    
-    .form__line {
-        border-radius: 0.01vw;
-        height: 0.2vw;
-        width: 100%;
-        background-color: #acacac;
+        border-bottom: 0.1vw solid red;
     }
     
     .form__void {
@@ -370,7 +421,6 @@
     */
     
     .form-register {
-        opacity: 1;
         padding: 1vw 0vw 3vw;
         max-height: 45vw;
         max-width: 45vw;
@@ -379,7 +429,6 @@
         box-shadow: 0.5vw 0.7vw 1vw rgba(0, 0, 0, 0.5);
         border-radius: 5vw;
         position: fixed;
-        display: none;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -441,7 +490,7 @@
         user-select: none;
         text-align: justify;
     }
-    /*
+    
     @media (max-width: 426px) {
         header {
             height: 14vw;
@@ -549,4 +598,3 @@
             border-radius: 1vw;
         }
     }
-    */

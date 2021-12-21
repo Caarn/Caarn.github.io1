@@ -6,226 +6,100 @@
     <link href="./css/main.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width">
     <script src="script.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <title>Фотогаллерея</title>
 
 </head>
 
 </body>
-<div class="background-blur">
-    <header>
+<!---Основной дизайн--->
 
-        <div class="header-logo">
-            <a style="height:100%; width:100% ;display:block;" href="https://caarn.github.io/Lab2-web.github.io/"></a>
-        </div>
+<div id="body__blur">
+    <!-------Шапка--------->
 
-        <div class="header-block-auth">
-
-
-            <div class="header-block-auth-text">Войти</div>
-            <div class="header-block-auth-text">Регистрация</div>
+    <header id="header">
+        <div id="header__body">
+            <div id="logo">
+                <a id="logo__link" href="https://caarn.github.io/Lab2-web.github.io/"></a>
+            </div>
+            <a href="#wrapperauth" class="link link__enter popup-linkAuth">Войти</a>
+            <a href="#wrapperreg" class="link link__registration popup-linkReg">Регистрация</a>
         </div>
     </header>
-
-
-
-
-    <main>
-        <div class="container">
-            <div class="box-1">
-                <div class="boxlabel">
-                    <div class="boxlabel-name">
-                        1.png
+    <!-------Контент------->
+    <main id="main">
+        <div id="main__grid">
+            <div class="box box-1">
+                <a class="box__content" href="#">
+                    <div class="box__name">1.png</div>
+                    <div class="box__container_Date">
+                        <div class="date__logo "></div>
+                        <div class="box__date">08.11.2021</div>
                     </div>
-                    <div class="boxlabel-block">
-                        <div class="boxlabel-block-logo">
-                        </div>
-
-                        <div class="boxlabel-block-date">
-                            08.11.2021
-                        </div>
-                    </div>
-                </div>
+                </a>
+                <img class="box__image" src="images/5-1.jpg">
             </div>
-            <div class="box-2">
-                <div class="boxlabel">
-                    <div class="boxlabel-name">
-                        2.png
-                    </div>
-                    <div class="boxlabel-block">
-                        <div class="boxlabel-block-logo">
-                        </div>
 
-                        <div class="boxlabel-block-date">
-                            08.11.2021
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="box-3">
-                <div class="boxlabel">
-                    <div class="boxlabel-name">
-                        3.png
-                    </div>
-                    <div class="boxlabel-block">
-                        <div class="boxlabel-block-logo">
-                        </div>
-
-                        <div class="boxlabel-block-date">
-                            08.11.2021
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="box-4">
-                <div class="boxlabel">
-                    <div class="boxlabel-name">
-                        4.png
-                    </div>
-                    <div class="boxlabel-block">
-                        <div class="boxlabel-block-logo">
-                        </div>
-
-                        <div class="boxlabel-block-date">
-                            08.11.2021
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="box-5">
-                <div class="boxlabel">
-                    <div class="boxlabel-name">
-                        5.png
-                    </div>
-                    <div class="boxlabel-block">
-                        <div class="boxlabel-block-logo">
-                        </div>
-
-                        <div class="boxlabel-block-date">
-                            08.11.2021
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="box-6">
-                <div class="boxlabel">
-                    <div class="boxlabel-name">
-                        6.png
-                    </div>
-                    <div class="boxlabel-block">
-                        <div class="boxlabel-block-logo">
-                        </div>
-
-                        <div class="boxlabel-block-date">
-                            08.11.2021
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="box-7">
-                <div class="boxlabel">
-                    <div class="boxlabel-name">
-                        7.png
-                    </div>
-                    <div class="boxlabel-block">
-                        <div class="boxlabel-block-logo">
-                        </div>
-
-                        <div class="boxlabel-block-date">
-                            08.11.2021
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="box-8">
-                <div class="boxlabel">
-                    <div class="boxlabel-name">
-                        8.png
-                    </div>
-                    <div class="boxlabel-block">
-                        <div class="boxlabel-block-logo">
-                        </div>
-
-                        <div class="boxlabel-block-date">
-                            08.11.2021
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="box-9">
-                <div class="boxlabel">
-                    <div class="boxlabel-name">
-                        9.png
-                    </div>
-                    <div class="boxlabel-block">
-                        <div class="boxlabel-block-logo">
-                        </div>
-
-                        <div class="boxlabel-block-date">
-                            08.11.2021
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-
     </main>
-    <footer>
-        <div class="footer__contact contact">
-            <div class="contact__name">Коретников Николай</div>
-            <div class="contact__email">koretnikov01@mail.ru</div>
-        </div>
+    <footer id="footer">
+        <a class="contact">Коретников Николай</a>
+        <a class="contact">koretnikov01@mail.ru</a>
     </footer>
 </div>
-<div class="wrapper">
+<!----Формы----->
+<div id="wrapperauth" class="wrapperauth">
     <!--Форма входа-->
-    <div class="form-auth">
-        <form action="#" method="post" id="form1" class="form__body">
-            <h1 class="form__title">Вход</h1>
-            <div class="form__item">
-                <input id="formLogin" placeholder="Логин" type="text" name="E-mail" class="form__input _req _email" />
-                <div class="form__line"></div>
+    <div id="form-auth" class="form-auth ">
+        <form action="# " method="post " id="form_log " class="form__body ">
+            <h1 class="form__title ">Вход</h1>
+            <div class="form__item ">
+                <input id="formLogin " placeholder="Логин " type="text " name="E-mail " class="form__input _req _email " />
+
             </div>
-            <div class="form__item">
-                <input id="formPassword" placeholder="Пароль" type="text" name="password" class="form__input _req" />
-                <div class="form__line"></div>
+            <div class="form__item ">
+                <input id="formPassword " placeholder="Пароль " type="text " name="password " class="form__input _req " />
+
             </div>
 
-            <button type="submit" class="form__button">Войти</button>
-            <button type="submit" class="form__button_">Регистрация</button>
+            <button type="submit " class="form__button ">Войти</button>
+            <button type="submit " class="form__button_ ">Регистрация</button>
 
         </form>
     </div>
+</div>
+<div id="wrapperreg" class="wrapperreg">
+    <div id="popupReg" class="form-register">
+        <form action="# " method="post " id="form_reg " class="form__body ">
+            <h1 class="form__title ">Регистрация</h1>
+            <div class="form__item ">
+                <input id="formName " placeholder="Имя " type="text " name="name " class="form__input _req " />
 
-    <div class="form-register">
-        <form action="#" method="post" id="form2" class="form__body">
-            <h1 class="form__title">Регистрация</h1>
-            <div class="form__item">
-                <input id="formName" placeholder="Имя" type="text" name="name" class="form__input _req" />
-                <div class="form__line"></div>
             </div>
-            <div class="form__item">
-                <input id="formEmail" placeholder="E-mail" type="text" name="E-mail" class="form__input _req _email" />
-                <div class="form__line"></div>
+            <div class="form__item ">
+                <input id="formEmail " placeholder="E-mail " type="text " name="E-mail " class="form__input _req _email " />
+
             </div>
-            <div class="form__item">
-                <input id="formPhone" placeholder="Телефон" type="text" name="phone" class="form__input _req" />
-                <div class="form__line"></div>
+            <div class="form__item ">
+                <input id="formPhone " placeholder="Телефон " type="text " name="phone " class="form__input _req " />
+
             </div>
-            <div class="form__item">
-                <input id="formPassword" placeholder="Пароль" type="text" name="password" class="form__input _req" />
-                <div class="form__line"></div>
+            <div class="form__item ">
+                <input id="formPassword " placeholder="Пароль " type="text " name="password " class="form__input _req " />
+
             </div>
-            <div class="form__item">
-                <input id="formCheckPassword" placeholder="Повторите пароль" type="text" name="check_password" class="form__input _req" />
-                <div class="form__line"></div>
+            <div class="form__item ">
+                <input id="formCheckPassword " placeholder="Повторите пароль " type="text " name="check_password " class="form__input _req " />
+
             </div>
-            <div class="checkbox">
-                <input id="formAgreement2" checked="checked" type="checkbox" name="agreement" class="checkbox__input _req">
-                <label for="formAgreement2" class="checkbox__label"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="">условиями</a>*</span></label>
+            <div class="checkbox ">
+                <input id="formAgreement2 " checked="checked " type="checkbox " name="agreement " class="checkbox__input _req ">
+                <label for="formAgreement2 " class="checkbox__label "><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href=" ">условиями</a>*</span></label>
             </div>
-            <button type="submit" class="form__button">Зарегистрироваться</button>
-            <button type="submit" class="form__button_">Уже есть аккаунт? Войти</button>
+            <button type="submit " class="form__button ">Зарегистрироваться</button>
+            <button type="submit " class="form__button_ ">Уже есть аккаунт? Войти</button>
 
         </form>
     </div>
