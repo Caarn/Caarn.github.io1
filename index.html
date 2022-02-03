@@ -18,12 +18,12 @@
 
 <div id="body__blur">
     <!-------Шапка--------->
-
     <header id="header">
         <div id="header__body">
             <div id="logo">
                 <a id="logo__link" href="https://caarn.github.io/Lab2-web.github.io/"></a>
             </div>
+            <div id="void__line"> </div>
             <a href="#wrapperauth" class="link link__enter popup-linkAuth">Войти</a>
             <a href="#wrapperreg" class="link link__registration popup-linkReg">Регистрация</a>
         </div>
@@ -41,9 +41,30 @@
                 </a>
                 <img class="box__image" src="images/5-1.jpg">
             </div>
+            <div class="box box-2">
+                <a class="box__content" href="#">
+                    <div class="box__name">2.png</div>
+                    <div class="box__container_Date">
+                        <div class="date__logo "></div>
+                        <div class="box__date">09.11.2021</div>
+                    </div>
+                </a>
+                <img class="box__image" src="images/5-1.jpg">
+            </div>
+            <div class="box box-3">
+                <a class="box__content" href="#">
+                    <div class="box__name">3.png</div>
+                    <div class="box__container_Date">
+                        <div class="date__logo "></div>
+                        <div class="box__date">10.11.2021</div>
+                    </div>
+                </a>
+                <img class="box__image" src="images/5-1.jpg">
+            </div>
 
         </div>
     </main>
+    <!-------Подвал------->
     <footer id="footer">
         <a class="contact">Коретников Николай</a>
         <a class="contact">koretnikov01@mail.ru</a>
@@ -64,12 +85,13 @@
 
             </div>
 
-            <button type="submit " class="form__button ">Войти</button>
-            <a href="#wrapperreg" class="form__button_ ">Регистрация</a>
+            <button type="submit " class="form__firstbutton ">Войти</button>
+            <a href="#wrapperreg" class="form__secondbutton ">Регистрация</a>
 
         </form>
     </div>
 </div>
+<!--Форма регистрации-->
 <div id="wrapperreg" class="wrapperreg">
     <div id="popupReg" class="form-register">
         <form action="# " method="post " id="form_reg " class="form__body ">
@@ -96,11 +118,10 @@
             </div>
             <div class="checkbox ">
                 <input id="formAgreement2 " checked="checked " type="checkbox " name="agreement " class="checkbox__input _req ">
-                <label for="formAgreement2 " class="checkbox__label "><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href=" ">условиями</a>*</span></label>
+                <label for="formAgreement2 " class="checkbox__label "><span>Я даю свое согласие на обработку персональных данных в соответствии с <a class="checkbox__label_a" href=" ">условиями</a>*</span></label>
             </div>
-            <button type="submit " class="form__button ">Зарегистрироваться</button>
-            <a href="#wrapperauth" class="form__button_ ">Уже есть аккаунт? Войти</a>
-
+            <button type="submit " class="form__firstbutton ">Зарегистрироваться</button>
+            <a href="#wrapperauth" class="form__secondbutton ">Уже есть аккаунт? Войти</a>
         </form>
     </div>
 
